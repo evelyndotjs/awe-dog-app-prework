@@ -1,0 +1,16 @@
+<body>
+  <h1>Evelyn's Dog Generator</h1>
+
+  <form method="POST" action="/">
+    <select name="selected">
+      <!-- prettier-ignore -->
+      <% breedSelect.forEach(function(breed){ %>
+      <!-- prettier-ignore -->
+      <option value="<%= breed.breedSelect %>"><%= breed.breedSelect %>
+      <!-- prettier-ignore -->
+      <% }) %>
+    </option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</body>

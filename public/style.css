@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    text-align: center;
+    background-color: #e4d8dc;
+  }
+  
+  nav {
+    background-color: #c9ccd5;
+    height: 200px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    padding: 3%;
+  }
+  
+  .breed {
+    font-size: 1rem;
+  }
+  
+  .main-image {
+    margin: 5% auto;
+    display: none;
+  }
+  
+  /* Spinner */
+  
+  Í
