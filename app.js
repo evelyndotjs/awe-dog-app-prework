@@ -1,14 +1,34 @@
 const express = require("express");
-const app = express();
 const https = require("https");
+const axios = require("axios");
+const jsdom = require("jsdom");
+const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+let selected = "";
+let dogImage = "";
+
+// const dom = new jsdom.JSDOM(`<!DOCTYPE html>
+// <body>
+// <span id="loader">
+// 🐶
+// </span>
+// </body>
+// `);
+
+// const jquery = require("jquery")(dom.window);
+
+// const getLoader = dom.window.document.getElementById("loader");
+
+// const loader = getLoader.textContent;
+
 app.get("/", function (req, res) {
   const url = "https://dog.ceo/api/breeds/list/all";
+
   https.get(url, function (response) {
     let breedList = "";
 
@@ -19,14 +39,29 @@ app.get("/", function (req, res) {
     response.on("end", function () {
       const dogData = JSON.parse(breedList);
       const breedSelect = Object.keys(dogData.message);
-      res.render("dog", { breedSelect: breedSelect });
+
+      res.render("dog", {
+        breedSelect: breedSelect,
+        selected: selected,
+        dogImage: dogImage,
+      });
     });
   });
 });
 
+app.get("/:submit", function (req, res) {
+  axios
+    .get(`https://dog.ceo/api/breed/${selected}/images/random`)
+    .then((res) => {
+      const dogs = res.data;
+      dogImage = dogs.message;
+    });
+  res.redirect("/");
+});
+
 app.post("/", function (req, res) {
-  const selected = req.body;
-  console.log(selected);
+  selected = req.body.selected;
+  res.redirect("/submit");
 });
 
 app.listen(3000, function () {
