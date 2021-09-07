@@ -12,20 +12,6 @@ app.use(express.json());
 let selected = "";
 let dogImage = "";
 
-// const dom = new jsdom.JSDOM(`<!DOCTYPE html>
-// <body>
-// <span id="loader">
-// 🐶
-// </span>
-// </body>
-// `);
-
-// const jquery = require("jquery")(dom.window);
-
-// const getLoader = dom.window.document.getElementById("loader");
-
-// const loader = getLoader.textContent;
-
 app.get("/", function (req, res) {
   const url = "https://dog.ceo/api/breeds/list/all";
 
