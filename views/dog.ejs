@@ -4,11 +4,8 @@
 
   <form method="POST" action="/">
     <select name="selected">
-      <!-- prettier-ignore -->
       <% breedSelect.forEach(function(breed){ %>
-      <!-- prettier-ignore -->
       <option value="<%= breed %>"><%= breed %>
-      <!-- prettier-ignore -->
       <% }) %>
     </option>
     </select>
