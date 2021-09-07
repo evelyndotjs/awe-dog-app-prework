@@ -9,7 +9,8 @@ It is currently hosted locally.
 
 ![alt text](https://i.postimg.cc/pX4TtGNx/Screen-Shot-2021-09-07-at-12-08-54-AM.png "Dog App demo page")
 
-Express was used to create the routes, EJS was used to render the HTML, and the static stylesheet was served up in the public folder.
+Express was used to create the routes, EJS was used to render the HTML, and the static stylesheet was served up in the public folder.<br>
+
 Two modules, HTTPS (native module) and Axios were used to make the HTTP request in NodeJS because I wanted practice on using different modules.
 
 ## Still in progress...
