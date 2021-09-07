@@ -3,7 +3,7 @@
 The original prework instruction is to recreate the [Dog App](https://frontendmasters.github.io/bootcamp/dog-viewer/dog.html) created by Brian Holt from Frontend Masters.
 
 Having watched a step by step tutorial and replicating the code, I did not find the process to be very educational. <br>
-In attempt to get more practice from writing server code, I attempted to recreate the Dog App entirely via backend. 
+Even though building it entirely frontend with DOM access was the most straightforward, in order to get more practice from writing server code, I attempted to recreate the Dog App using Express & EJS. 
 
 It is currently hosted locally.
 
