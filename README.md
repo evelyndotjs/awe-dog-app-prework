@@ -15,4 +15,4 @@ Express was used to create the routes, EJS was used to render the HTML, and the 
 Two modules, HTTPS (native module) and Axios were used to make the HTTP request in NodeJS because I wanted practice on using different modules.
 
 ## Blocker
-Render a spinner while the API retrieves data during POST request without frontend
+Render a spinner while the API retrieves data during POST request without DOM
